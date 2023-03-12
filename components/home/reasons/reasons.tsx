@@ -47,13 +47,16 @@ export const Reasons = () => {
 };
 
 const Root = styled('div')(({ theme }) => ({
-  marginBottom: '64px'
+  marginBottom: '64px',
 }));
 
 const Grid = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'stretch',
   justifyContent: 'space-between',
+  [theme.breakpoints.down('md')]: {
+    flexDirection: 'column',
+  },
 }));
 
 const Item = styled(Card)(({ theme }) => ({
@@ -63,6 +66,10 @@ const Item = styled(Card)(({ theme }) => ({
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
+  [theme.breakpoints.down('md')]: {
+    width: '100%',
+    marginBottom: '24px',
+  },
 }));
 
 const IconWrapper = styled('div')(({ theme }) => ({
@@ -79,12 +86,11 @@ const IconWrapper = styled('div')(({ theme }) => ({
 const ItemTitle = styled(Typography)(({ theme }) => ({
   ...theme.typography.h5,
   marginBottom: '16px',
-  color: '#383942'
-
+  color: '#383942',
 }));
 
 const ItemText = styled(Typography)(({ theme }) => ({
   ...theme.typography.body2,
   textAlign: 'center',
-  color: '#383942'
+  color: '#383942',
 }));

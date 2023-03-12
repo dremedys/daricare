@@ -1,5 +1,5 @@
-import '../styles/app.css';
-import '../styles/reset.css';
+import '../styles/app.scss';
+import '../styles/reset.scss';
 
 import { theme } from '@/theme';
 import { ThemeProvider } from '@mui/material';

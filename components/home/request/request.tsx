@@ -32,12 +32,23 @@ const Root = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'space-between',
   marginBottom: '64px',
+  [theme.breakpoints.down('md')]: {
+    flexDirection: 'column',
+    height: 'auto'
+  }
 }));
 
 const Left = styled('div')(({ theme }) => ({
   width: '50%',
+  [theme.breakpoints.down('md')]: {
+    width: '100%',
+    marginBottom: '32px'
+  }
 }));
 
 const Right = styled('div')(({ theme }) => ({
   width: '30%',
+  [theme.breakpoints.down('md')]: {
+    width: '100%',
+  }
 }));

@@ -1,16 +1,22 @@
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { Typography, styled } from '@mui/material';
+import { Typography, styled, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { theme } from '@/theme';
 
 export const HeroSection = () => {
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const height = isMobile ? '100vh' : '500px'
+
   return (
     <Root>
       <Swiper pagination={{ clickable: true }} autoplay loop centeredSlides modules={[Pagination]} spaceBetween={50}>
-        <SwiperSlide style={{ height: '435px' }}>
+        <SwiperSlide
+          style={{ height: height }}
+        >
           <FirstBannerWrapper>
             <Container className="container">
               <Content>
@@ -25,7 +31,9 @@ export const HeroSection = () => {
             </Container>
           </FirstBannerWrapper>
         </SwiperSlide>
-        <SwiperSlide style={{ height: '435px' }}>
+        <SwiperSlide
+          style={{ height: height }}
+        >
           <SecondBannerWrapper>
             <Container className="container">
               <Content>
@@ -55,7 +63,9 @@ const Root = styled('div')`
 const BannerWrapper = styled('div')`
   width: 100%;
   position: relative;
-  height: 435px;
+  height: 100%;
+
+  //height: 435px;
   padding: 50px;
 `;
 
@@ -74,15 +84,24 @@ export const Container = styled('div')`
   z-index: 100;
   justify-content: space-between;
   align-items: center;
+  ${props => props.theme.breakpoints.down('md')} {
+    flex-direction: column;
+  }
 `;
 
 export const Content = styled('div')`
   width: 50%;
+  ${props => props.theme.breakpoints.down('md')} {
+    width: 100%;
+  }
 `;
 
 export const ImageWrapper = styled('div')`
   width: 40%;
   height: 100%;
+  ${props => props.theme.breakpoints.down('md')} {
+    width: 100%;
+  }
 `;
 
 export const Title = styled(Typography)`
