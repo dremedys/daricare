@@ -1,0 +1,14 @@
+@import "fonts.css";
+@import "reset.css";
+html {
+    font-family: Euclid, sans-serif !important;
+}
+* {
+    box-sizing: border-box !important;
+}
+
+.container {
+    width: 1136px;
+    margin-right: auto;
+    margin-left: auto;
+}
