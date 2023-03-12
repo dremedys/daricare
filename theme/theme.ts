@@ -37,7 +37,6 @@ theme.components = {
         fontFamily: theme.typography.button.fontFamily,
         fontSize: theme.typography.button.fontSize,
         padding: '10px 16px',
-
       },
       outlined: {
         background: '#FFFFFF',

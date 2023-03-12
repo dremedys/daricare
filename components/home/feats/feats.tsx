@@ -104,7 +104,7 @@ const Left = styled('div')`
 
 const Right = styled('div')`
   width: 45%;
-  transform: translateY(-20px);
+  color: #383942;
   ${props => props.theme.breakpoints.down('md')} {
     width: 100%;
     display: flex;
