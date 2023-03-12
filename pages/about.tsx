@@ -47,7 +47,9 @@ export const AboutPage = () => {
   );
 };
 
-const Root = styled('div')``;
+const Root = styled('div')`
+  margin-bottom: 64px;
+`;
 
 const Grid = styled('div')(({ theme }) => ({
   display: 'flex',

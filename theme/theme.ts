@@ -44,11 +44,11 @@ theme.components = {
         border: '1px solid rgba(0, 0, 0, 0.12)',
         boxShadow: 'none',
         '&:hover': {
-          background: 'rgba(0, 0, 0, 0.08)',
+          background: '#FFFFFF',
           border: '1px solid rgba(0, 0, 0, 0.12)',
         },
         '&:active': {
-          background: 'rgba(0, 0, 0, 0.12)',
+          background: '#FFFFFF',
           border: '1px solid rgba(0, 0, 0, 0.12)',
         },
         '&:disabled': {

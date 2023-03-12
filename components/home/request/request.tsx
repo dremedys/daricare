@@ -1,3 +1,4 @@
+import { FORM_LINK } from '@/constants/constants';
 import { Button, Typography, styled } from '@mui/material';
 import Image from 'next/image';
 
@@ -11,7 +12,9 @@ export const Request = () => {
         <Typography variant="h5" fontWeight={500} mb="24px">
           Оставайтесь на вершине здоровья и благополучия - подпишитесь на нашу форму отслеживания новостей.
         </Typography>
-        <Button variant="outlined">Оставить заявку</Button>
+        <Button href={FORM_LINK} variant="outlined">
+          Оставить заявку
+        </Button>
       </Left>
       <Right>
         <Image src="/images/contact-us.png" width={500} height={500} layout="responsive" />
