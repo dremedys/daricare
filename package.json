@@ -43,6 +43,7 @@
     "react-lines-ellipsis": "^0.15.3",
     "react-string-replace": "^1.1.0",
     "rxjs": "^7.5.5",
+    "sass": "^1.59.2",
     "scss": "^0.2.4",
     "simplebar-react": "^2.4.1",
     "styled-components": "^5.3.5",
