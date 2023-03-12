@@ -1,22 +1,20 @@
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import { theme } from '@/theme';
 import { Typography, styled, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { theme } from '@/theme';
 
 export const HeroSection = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const height = isMobile ? '100vh' : '500px'
+  const height = isMobile ? '100vh' : '500px';
 
   return (
     <Root>
       <Swiper pagination={{ clickable: true }} autoplay loop centeredSlides modules={[Pagination]} spaceBetween={50}>
-        <SwiperSlide
-          style={{ height: height }}
-        >
+        <SwiperSlide style={{ height: height }}>
           <FirstBannerWrapper>
             <Container className="container">
               <Content>
@@ -31,9 +29,7 @@ export const HeroSection = () => {
             </Container>
           </FirstBannerWrapper>
         </SwiperSlide>
-        <SwiperSlide
-          style={{ height: height }}
-        >
+        <SwiperSlide style={{ height: height }}>
           <SecondBannerWrapper>
             <Container className="container">
               <Content>
